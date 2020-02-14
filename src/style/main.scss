@@ -1,0 +1,11 @@
+@import 'partials/colors.scss';
+
+body {
+    background: $primary-color-dark;
+    h1 {
+        color: $primary-color-red;
+        &:hover {
+            color: $primary-color-blue;
+        }
+    }
+}
