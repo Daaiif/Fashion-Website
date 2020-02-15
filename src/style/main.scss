@@ -1,11 +1,9 @@
-@import 'partials/colors.scss';
+@import 'reset.scss';
+@import 'variables.scss';
+@import 'fonts.scss';
+@import 'mixins.scss';
+@import 'core.scss';
 
-body {
-    background: $primary-color-dark;
-    h1 {
-        color: $primary-color-red;
-        &:hover {
-            color: $primary-color-blue;
-        }
-    }
-}
+@import 'partials/top';
+@import 'partials/menu';
+@import 'partials/icons';

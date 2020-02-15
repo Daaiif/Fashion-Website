@@ -1,0 +1,14 @@
+.icons {
+    display: flex;
+    align-items: center;
+    .icons-cart, .icons-search {
+        margin: 0 12px;
+    }
+    .icons-search {
+        position: relative;
+    }
+    .icons-img {
+        cursor: pointer;
+        display: block;
+    }
+}

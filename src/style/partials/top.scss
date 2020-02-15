@@ -1,0 +1,13 @@
+.top {
+    padding: 30px 0;
+    border-bottom: 6px solid $border-top;
+    .top-wrap {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .top-menu {
+        flex-basis: 58%;
+    }
+}

@@ -11,7 +11,11 @@ const browserSync = require('browser-sync').create();
 
 const styleFiles = [
     './src/style/main.scss',
-    './src/style/partials/colors.scss'
+    './src/style/_reset.scss',
+    './src/style/_variables.scss',
+    './src/style/_fonts.scss',
+    './src/style/_mixins.scss',
+    './src/style/_core.scss'
 ];
 
 const jsFiles = [
@@ -19,7 +23,7 @@ const jsFiles = [
     './src/js/main.js'
 ];
 
-
+// Style task
 gulp.task('css', () => {
     return gulp.src(styleFiles)
     .pipe(sourcemaps.init())
@@ -36,7 +40,7 @@ gulp.task('css', () => {
     .pipe(gulp.dest('./build/css'))
     .pipe(browserSync.stream());
 });
-
+// JavaScript task
 gulp.task('js', () => {
     return gulp.src(jsFiles)
     .pipe(sourcemaps.init())
@@ -48,11 +52,11 @@ gulp.task('js', () => {
     .pipe(gulp.dest('./build/js'))
     .pipe(browserSync.stream());
 });
-
+// Del task
 gulp.task('del', () => {
     return del(['build/*'])
 });
-
+// Img compress task
 gulp.task('img-compress', () => {
     return gulp.src('./src/img/**')
         .pipe(imagemin({
@@ -60,7 +64,7 @@ gulp.task('img-compress', () => {
         }))
     .pipe(gulp.dest('./build/img'))
 })
-
+// Watch task
 gulp.task('watch', () => {
     browserSync.init({
         server: {
@@ -72,5 +76,5 @@ gulp.task('watch', () => {
     gulp.watch('./src/js/**/*.js', gulp.series('js'))
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
-
+// Default task
 gulp.task('default', gulp.series('del', gulp.parallel('css', 'js', 'img-compress'), 'watch'));
