@@ -10,6 +10,7 @@ const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
 
 const styleFiles = [
+    './src/style/owl.carousel.css',
     './src/style/main.scss',
     './src/style/_reset.scss',
     './src/style/_variables.scss',
@@ -19,6 +20,7 @@ const styleFiles = [
 ];
 
 const jsFiles = [
+    './src/js/owl.carousel.js',
     './src/js/lib.js',
     './src/js/main.js'
 ];
@@ -73,6 +75,7 @@ gulp.task('watch', () => {
     });
     gulp.watch('./src/img/**', gulp.series('img-compress'))
     gulp.watch('./src/style/**/*.scss', gulp.series('css'))
+    gulp.watch('./src/style/**/*.css', gulp.series('css'))
     gulp.watch('./src/js/**/*.js', gulp.series('js'))
     gulp.watch("./*.html").on('change', browserSync.reload);
 });
