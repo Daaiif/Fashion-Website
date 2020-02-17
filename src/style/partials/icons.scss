@@ -1,11 +1,12 @@
 .icons {
     display: flex;
     align-items: center;
-    .icons-cart, .icons-search {
+    .icons-cart {
         margin: 0 12px;
     }
     .icons-search {
         position: relative;
+        margin-left: 12px;
     }
     .icons-img {
         cursor: pointer;
