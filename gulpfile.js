@@ -11,12 +11,12 @@ const browserSync = require('browser-sync').create();
 
 const styleFiles = [
     './src/style/owl.carousel.css',
-    './src/style/main.scss',
     './src/style/_reset.scss',
     './src/style/_variables.scss',
     './src/style/_fonts.scss',
     './src/style/_mixins.scss',
-    './src/style/_core.scss'
+    './src/style/_core.scss',
+    './src/style/main.scss'
 ];
 
 const jsFiles = [
