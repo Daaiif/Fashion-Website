@@ -110,3 +110,63 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .offers {
+        flex-wrap: wrap;
+        .offers-right {
+            flex-basis: 100%;
+            display: block;
+            .offers-element {
+                max-width: 371px;
+                margin: 20px auto;
+            }
+        }
+        .offers-center {
+            margin: 0;
+        }
+        
+    }
+}
+
+@media (max-width: 800px) {
+    .offers {
+        .offers-left {
+            flex-basis: 100%;
+            display: block;
+            .offers-element {
+                max-width: 277px;
+                margin: 20px auto;
+            }
+        }
+        .offers-center {
+            flex-basis: 100%;
+            display: block;
+            .offers-element {
+                max-width: 470px;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .offers {
+        margin: 25px 0;
+        .offers-center {
+            .offers-info {
+                top: 50px;
+            }
+        }
+        .offers-right {
+            .offers-info {
+                top: 15px;
+            }
+        }
+        .offers-element-glasses {
+            .offers-info {
+                top: auto;
+            }
+        }
+    }
+}
