@@ -55,4 +55,46 @@
             margin: 50px auto;
         };
     }
+    .owl-nav {
+        button.owl-prev, button.owl-next {
+            background: url('../img/sprite-arrow2.png') 0 0 no-repeat;
+            width: 49px;
+            height: 49px;
+            border: none;
+            box-shadow: none;
+            position: absolute;
+            left: -55px;
+            top: calc(50% - 49px);
+            cursor: pointer;
+            transform: translateY(-50%);
+            &:focus {
+                outline: none;
+            }
+        }
+        button.owl-prev {
+            &:hover {
+                background-position: 0 -49px;
+            }
+        }
+        button.owl-next {
+            background-position: -49px 0;
+            left: auto;
+            right: -55px;
+            &:hover {
+                background-position: -49px -49px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1300px) {
+    .featured {
+        width: calc(100% - 100px);
+        margin: 90px auto;
+    }
+}
+@media (max-width: 768px) {
+    .featured {
+        margin: 25px auto;
+    }
 }
